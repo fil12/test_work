@@ -4,3 +4,11 @@
 require_once __DIR__ . '/../vendor/autoload.php';
 
 
+use App\ImagesLoader;
+
+try {
+    $imagesLoad = new ImagesLoader('http://pngimg.com/uploads/mario/mario_PNG55.png', 'upl', ['jpg', 'png', 'gif', 'jpeg']);
+    echo $imagesLoad->loadAndSave();
+} catch (Exception $e) {
+    echo 'Выброшено исключение: ',  $e->getMessage(), "\n";
+}

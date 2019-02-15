@@ -1,18 +1,17 @@
 {
-  "name": "greeflas/default-project",
-  "description": "This is a default structure for PHP projects.",
-  "keywords": ["project", "template", "structure", "skeleton", "phpunit"],
+  "name": "fil12/ImagesLoaderFromUrl",
+  "description": "This`s a images loadef from url.",
   "type": "project",
   "license": "BSD-3-Clause",
   "authors": [
     {
-      "name": "Vladimir Kuprienko",
-      "email": "vldmr.kuprienko@gmail.com"
+      "name": "Alex Filimonov",
+      "email": "filimonov12@gmail.com"
     }
   ],
   "minimum-stability": "stable",
   "require": {
-    "php": ">=7.3"
+    "php": ">=7.2"
   },
   "require-dev": {
     "phpunit/phpunit": "^8.0",

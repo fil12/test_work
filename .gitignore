@@ -7,6 +7,9 @@ composer.phar
 # PhpStrom project files
 .idea/
 
+#bin
+.bin/
+
 # Mac DS_Store Files
 .DS_Store
 
