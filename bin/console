@@ -3,12 +3,23 @@
 
 require_once __DIR__ . '/../vendor/autoload.php';
 
-
-use App\ImagesLoader;
+use App\Games;
+use App\Services\GameService;
 
 try {
-    $imagesLoad = new ImagesLoader('http://pngimg.com/uploads/mario/mario_PNG55.png', 'upl', ['jpg', 'png', 'gif', 'jpeg']);
-    echo $imagesLoad->loadAndSave();
-} catch (Exception $e) {
+    $game = new Games(new GameService());
+
+    $playersCollection = $game->getPlayers();
+    for($i = 1; $i<=100; $i++) {
+        $winner = $game->playStoneScissorsPaper($playersCollection);
+
+        echo "Game number - $i : ";
+        if ($winner){
+            echo "Winner - $winner->name\n";
+        } else {
+            echo "tie\n";
+        }
+    }
+} catch (Throwable $e) {
     echo 'Выброшено исключение: ',  $e->getMessage(), "\n";
 }
